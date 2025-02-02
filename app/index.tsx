@@ -171,16 +171,18 @@ export default function App() {
   console.log("POINTS")
   console.log(polylinePoints);
   console.log(detailedRoute);
+
+  if (isGoActive && detailedRoute) {
   // Check if the user is close to any point along the polyline
   detailedRoute.forEach((point) => {
     const distance = getDistance(fingerPos.latitude, fingerPos.longitude, point.latitude, point.longitude);
-    if (isGoActive && distance <= proximityThreshold) {
+    if (distance <= proximityThreshold) {
       Vibration.vibrate();  // Trigger vibration when close to a point
     }
-  });
+  });};
     checkProximity({ latitude, longitude });
-  };
-
+  
+}
   const summarizeTotal = async (text, placeId) => {
     Speech.speak("Summary")
     try {
