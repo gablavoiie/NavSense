@@ -4,20 +4,18 @@ SenseNav comes from the words "sensing" and "navigation". This application allow
 
 Current alternative systems include:
 
-Accessible Google Maps extension: Reads out loud map components.
+**Accessible Google Maps extension: Reads out loud map components.**
 
 Downsides:
+- Not multi-modal, can be difficult to gain a spacial understanding with only audio directions.
+- Lacking technology to summarize information
+- Lacking an "exploration" feel
 
-    Not multi-modal, can be difficult to gain a spacial understanding with only audio directions.
-    Lacking technology to summarize information
-    Lacking an "exploration" feel
-
-Braille Devices: Can display map components in a multi-modal fashion (audio + haptic feedback).
+**Braille Devices: Can display map components in a multi-modal fashion (audio + haptic feedback).**
 
 Downsides:
-
-    Braille devices are expensive, limiting access to only a small part of the low-vision community
-    Braille devices are often not portable
+- Braille devices are expensive, limiting access to only a small part of the low-vision community
+- Braille devices are often not portable
 
 ## What it does
 
@@ -29,13 +27,10 @@ AI-Powered Summaries: Uses Google’s Vertex AI Model to generate concise summar
 
 The app has four main capabilities for each point of interest. The points of interests are filtered in 4 categories: Restaurants, Metros, Health (e.g. hospitals) and Visit (e.g. museums).
 
-1 - Summary: Executive summary of the point of interest
-
-2 - Reviews: Summarizing Google Reviews for that point of interest
-
-3 - Accessibility: Summarizing Accessibility concerns highlighted in Google Reviews
-
-4 - Directions: Offers readable explanations of routes along with a haptic vibration path from the source to the destination for enhanced spacial awareness
+- Summary: Executive summary of the point of interest
+- Reviews: Summarizing Google Reviews for that point of interest
+- Accessibility: Summarizing Accessibility concerns highlighted in Google Reviews
+- Directions: Offers readable explanations of routes along with a haptic vibration path from the source to the destination for enhanced spacial awareness
 
 # Technologies
 
@@ -47,6 +42,5 @@ The Google Maps API was used to render the map on the screen with specific point
 
 ## What's next for NavSense
 
-1 - Replace button with a Speech Assistant
-
-2 - Verify validity and relevance of Generative AI summaries
+- Replace button with a Speech Assistant
+- Verify validity and relevance of Generative AI summaries
