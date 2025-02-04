@@ -1,50 +1,52 @@
-# Welcome to your Expo app 👋
+## Inspiration
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+SenseNav comes from the words "sensing" and "navigation". This application allows blind users to have a portable, affordable and multi-modal way to explore and navigate maps.
 
-## Get started
+Current alternative systems include:
 
-1. Install dependencies
+Accessible Google Maps extension: Reads out loud map components.
 
-   ```bash
-   npm install
-   ```
+Downsides:
 
-2. Start the app
+    Not multi-modal, can be difficult to gain a spacial understanding with only audio directions.
+    Lacking technology to summarize information
+    Lacking an "exploration" feel
 
-   ```bash
-    npx expo start
-   ```
+Braille Devices: Can display map components in a multi-modal fashion (audio + haptic feedback).
 
-In the output, you'll find options to open the app in a
+Downsides:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+    Braille devices are expensive, limiting access to only a small part of the low-vision community
+    Braille devices are often not portable
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## What it does
 
-## Get a fresh project
+NavSense accessible navigation tool for blind or low-vision users, empowering them to navigate public spaces with more independence and confidence.
 
-When you're ready, run:
+Audio and Haptic Feedback: Dragging a finger on points of interest generates a vibration
 
-```bash
-npm run reset-project
-```
+AI-Powered Summaries: Uses Google’s Vertex AI Model to generate concise summaries of 4 aspects for each point of interest:
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+The app has four main capabilities for each point of interest. The points of interests are filtered in 4 categories: Restaurants, Metros, Health (e.g. hospitals) and Visit (e.g. museums).
 
-## Learn more
+1 - Summary: Executive summary of the point of interest
 
-To learn more about developing your project with Expo, look at the following resources:
+2 - Reviews: Summarizing Google Reviews for that point of interest
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+3 - Accessibility: Summarizing Accessibility concerns highlighted in Google Reviews
 
-## Join the community
+4 - Directions: Offers readable explanations of routes along with a haptic vibration path from the source to the destination for enhanced spacial awareness
 
-Join our community of developers creating universal apps.
+# Technologies
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+The mobile application was built using React-Native.
+
+The back-end was built using Flask and is powered by the following Google Cloud APIs: Vertex AI Model, Google Direction API and Google Maps API.
+
+The Google Maps API was used to render the map on the screen with specific points of interests filtered based on the buttons on the top sreen. The Vertex AI Model was used to generate summaries of Map Directions,
+
+## What's next for NavSense
+
+1 - Replace button with a Speech Assistant
+
+2 - Verify validity and relevance of Generative AI summaries
